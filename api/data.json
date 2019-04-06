@@ -1,0 +1,36 @@
+{
+  "transactions": [
+    {
+      "amount": "250",
+      "date": "2019-03-01",
+      "deleted": false,
+      "id": 1,
+      "name": "In",
+      "type": "REVENUE"
+    },
+    {
+      "amount": "200",
+      "date": "2019-03-01",
+      "deleted": false,
+      "id": 4,
+      "name": "Out",
+      "type": "EXPENSE"
+    },
+    {
+      "amount": "250",
+      "date": "2019-04-02",
+      "deleted": false,
+      "id": 5,
+      "name": "In",
+      "type": "REVENUE"
+    },
+    {
+      "amount": "100",
+      "date": "2019-04-02",
+      "deleted": false,
+      "id": 6,
+      "name": "Out",
+      "type": "EXPENSE"
+    }
+  ]
+}
