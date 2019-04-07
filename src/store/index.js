@@ -6,7 +6,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import api from '../middleware/api';
 import rootReducer from '../reducers';
 
-const middleware = [thunk, api, reduxImmutableStateInvariant(), logger];
+const middleware = [thunk, api];
+
+if (process.env.NODE_ENV === 'development') {
+  middleware.push(reduxImmutableStateInvariant(), logger);
+}
 
 const enhancer = composeWithDevTools(applyMiddleware(...middleware));
 const configureStore = initialState => {

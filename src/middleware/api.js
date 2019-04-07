@@ -14,7 +14,7 @@ export default () => next => action => {
   if (typeof callAPI === 'undefined') {
     return next(action);
   }
-  const { endpoint, reqParams, types } = callAPI;
+  const { endpoint, reqParams = {}, types } = callAPI;
 
   const actionWith = nextAction => {
     const { [CALL_API]: del, ...finalAction } = { ...action, ...nextAction };
@@ -29,6 +29,7 @@ export default () => next => action => {
     ({ data }) =>
       next(
         actionWith({
+          id: reqParams.id,
           results: data,
           type: successType,
         }),

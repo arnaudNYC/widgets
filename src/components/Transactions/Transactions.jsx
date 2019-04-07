@@ -94,35 +94,14 @@ const Transaction = ({ actions, id, date, name, amount, type }) => {
             />
           </Grid>
           <Grid item>
-            <Button
-              onClick={() => {
-                actions.updateTransactionRequest(values).then(
-                  () => {
-                    actions.loadTransactionsRequest();
-                  },
-                  () => {
-                    // TODO error handling
-                  },
-                );
-              }}
-            >
+            <Button onClick={() => actions.updateTransactionRequest(values)}>
               Save
             </Button>
           </Grid>
           <Grid item>
             <Button
               color="secondary"
-              onClick={() => {
-                setValues({ deleted: true });
-                actions.deleteTransactionRequest(values).then(
-                  () => {
-                    actions.loadTransactionsRequest();
-                  },
-                  () => {
-                    // TODO error handling
-                  },
-                );
-              }}
+              onClick={() => actions.deleteTransactionRequest(values)}
             >
               Delete
             </Button>
