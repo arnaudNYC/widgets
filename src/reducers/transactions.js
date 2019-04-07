@@ -1,4 +1,5 @@
 import {
+  CREATE_TRANSACTION_SUCCESS,
   DELETE_TRANSACTION_SUCCESS,
   LOAD_TRANSACTIONS_SUCCESS,
   UPDATE_TRANSACTION_SUCCESS,
@@ -9,6 +10,9 @@ const reducer = (state = [], action) => {
   switch (type) {
     case LOAD_TRANSACTIONS_SUCCESS: {
       return [...results];
+    }
+    case CREATE_TRANSACTION_SUCCESS: {
+      return [...state, results];
     }
     case UPDATE_TRANSACTION_SUCCESS: {
       return state.map(current => {

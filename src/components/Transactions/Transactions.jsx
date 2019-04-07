@@ -181,17 +181,7 @@ const AddTransaction = ({ actions }) => {
         <Grid item>
           <Button
             color="primary"
-            onClick={() => {
-              actions.createTransactionRequest(values).then(
-                () => {
-                  actions.loadTransactionsRequest();
-                  setValues(newTransaction);
-                },
-                () => {
-                  // TODO error handling
-                },
-              );
-            }}
+            onClick={() => actions.createTransactionRequest(values)}
           >
             Add Transaction
           </Button>
