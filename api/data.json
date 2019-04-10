@@ -8,11 +8,11 @@
       "type": "PLASTIC"
     },
     {
-      "amount": 2,
-      "date": "2019-03-01",
+      "amount": 22,
+      "date": "2019-04-02",
       "id": 111,
-      "name": "In",
-      "type": "PLASTIC"
+      "name": "Second",
+      "type": "METAL"
     },
     {
       "amount": 3,
