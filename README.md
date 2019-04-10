@@ -1,3 +1,20 @@
+## Widgets project
+
+A sample CRUD application using
+
+- React
+- Redux
+- Redux-Thunk
+- Axios
+- Material-ui
+
+Tooling includes:
+
+- airbnb linting rules
+- prettier
+
+Bootstrapped with create-react-app
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -10,7 +27,7 @@ Installs all the dependencies
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
-Open [http://localhost:3004/api/transactions](http://localhost:3004/api/transactions) to view the rest api<br>
+Open [http://localhost:3004/api/widgets](http://localhost:3004/api/widget) to view the rest api<br>
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.<br>

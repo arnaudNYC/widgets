@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import 'typeface-roboto';
-import transactions from './transactions';
+import widgets from './widgetsReducer';
 
-export default combineReducers({ transactions });
+export default combineReducers({ widgets });
