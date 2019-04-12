@@ -1,25 +1,28 @@
 {
   "widgets": [
     {
-      "amount": 1,
-      "date": "2020-01-04",
-      "id": 11,
+      "amount": 11,
+      "date": "2019-04-04",
+      "id": 10,
       "name": "First",
-      "type": "PLASTIC"
+      "type": "METAL",
+      "lastUpdatedAt": 1555107958411
     },
     {
-      "amount": 22,
+      "amount": 12,
       "date": "2019-04-02",
-      "id": 111,
+      "id": 100,
       "name": "Second",
-      "type": "METAL"
+      "type": "PLASTIC",
+      "lastUpdatedAt": 1555107958411
     },
     {
-      "amount": 3,
+      "amount": 333,
       "date": "2019-03-01",
-      "id": 1111,
+      "id": 1000,
       "name": "In",
-      "type": "METAL"
+      "type": "METAL",
+      "lastUpdatedAt": 1555107959603
     }
   ]
 }

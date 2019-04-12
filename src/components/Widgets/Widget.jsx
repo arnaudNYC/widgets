@@ -47,7 +47,7 @@ const Widget = ({ actions, amount, classes, date, id, name, type }) => {
     actions.deleteWidgetRequest(state.id);
   };
   const updateWidget = () => {
-    actions.updateWidgetRequest(state);
+    actions.updateWidgetRequest({ ...state });
   };
 
   return (

@@ -6,18 +6,18 @@ import {
 } from '../actions/widgetActions';
 
 const reducer = (state = [], action) => {
-  const { type, results } = action;
+  const { type, data } = action;
   switch (type) {
     case LOAD_WIDGETS_SUCCESS: {
-      return [...results];
+      return [...data];
     }
     case CREATE_WIDGET_SUCCESS: {
-      return [...state, results];
+      return [...state, data];
     }
     case UPDATE_WIDGET_SUCCESS: {
       return state.map(current => {
-        if (current.id === results.id) {
-          return { ...results };
+        if (current.id === data.id) {
+          return { ...data };
         }
         return current;
       });

@@ -41,12 +41,15 @@ export const UPDATE_WIDGET_FAILURE = 'UPDATE_WIDGET_FAILURE';
 const updateWidget = reqParams => ({
   [CALL_API]: {
     endpoint: `widgets/${reqParams.id}`,
-    reqParams,
     types: [
       UPDATE_WIDGET_REQUEST,
       UPDATE_WIDGET_SUCCESS,
       UPDATE_WIDGET_FAILURE,
     ],
+  },
+  reqParams: {
+    ...reqParams,
+    lastUpdatedAt: Date.now(),
   },
 });
 export const updateWidgetRequest = values => dispatch =>
@@ -60,12 +63,12 @@ export const DELETE_WIDGET_FAILURE = 'DELETE_WIDGET_FAILURE';
 const deleteWidget = id => ({
   [CALL_API]: {
     endpoint: `widgets/${id}`,
-    id,
     types: [
       DELETE_WIDGET_REQUEST,
       DELETE_WIDGET_SUCCESS,
       DELETE_WIDGET_FAILURE,
     ],
   },
+  id,
 });
 export const deleteWidgetRequest = id => dispatch => dispatch(deleteWidget(id));

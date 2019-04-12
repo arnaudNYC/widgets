@@ -18,42 +18,46 @@ const Widgets = ({
   classes,
   createWidgetRequest,
   deleteWidgetRequest,
-  widgets,
+  loadWidgetsRequest,
   updateWidgetRequest,
-}) => (
-  <div className={classes.root}>
-    <Grid className={classes.container} container spacing={16}>
-      <Grid item xs={12}>
-        <Grid
-          alignItems="center"
-          container
-          direction="row"
-          justify="center"
-          spacing={16}
-        >
-          {widgets.map(widget => (
-            <Widget
-              key={widget.id}
-              actions={{
-                deleteWidgetRequest,
-                updateWidgetRequest,
-              }}
-              {...widget}
-            />
-          ))}
+  widgets,
+}) => {
+  return (
+    <div className={classes.root}>
+      <Grid className={classes.container} container spacing={16}>
+        <Grid item xs={12}>
+          <Grid
+            alignItems="center"
+            container
+            direction="row"
+            justify="center"
+            spacing={16}
+          >
+            {widgets.map(widget => (
+              <Widget
+                key={`${widget.id}-${widget.lastUpdatedAt}`}
+                actions={{
+                  deleteWidgetRequest,
+                  updateWidgetRequest,
+                }}
+                {...widget}
+              />
+            ))}
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <WidgetForm actions={{ createWidgetRequest }} />
         </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <WidgetForm actions={{ createWidgetRequest }} />
-      </Grid>
-    </Grid>
-  </div>
-);
+    </div>
+  );
+};
 
 Widgets.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   createWidgetRequest: PropTypes.func.isRequired,
   deleteWidgetRequest: PropTypes.func.isRequired,
+  loadWidgetsRequest: PropTypes.func.isRequired,
   updateWidgetRequest: PropTypes.func.isRequired,
   widgets: PropTypes.arrayOf(
     PropTypes.shape({
