@@ -18,7 +18,6 @@ const Widgets = ({
   classes,
   createWidgetRequest,
   deleteWidgetRequest,
-  loadWidgetsRequest,
   updateWidgetRequest,
   widgets,
 }) => {
@@ -57,7 +56,6 @@ Widgets.propTypes = {
   classes: PropTypes.shape({}).isRequired,
   createWidgetRequest: PropTypes.func.isRequired,
   deleteWidgetRequest: PropTypes.func.isRequired,
-  loadWidgetsRequest: PropTypes.func.isRequired,
   updateWidgetRequest: PropTypes.func.isRequired,
   widgets: PropTypes.arrayOf(
     PropTypes.shape({

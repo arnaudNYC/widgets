@@ -3,7 +3,6 @@ import Widgets from '../components/Widgets';
 import {
   createWidgetRequest,
   deleteWidgetRequest,
-  loadWidgetsRequest,
   updateWidgetRequest,
 } from '../actions/widgetActions';
 
@@ -12,7 +11,6 @@ const mapStateToProps = ({ widgets }) => ({ widgets });
 const mapDispatchToProps = {
   createWidgetRequest,
   deleteWidgetRequest,
-  loadWidgetsRequest,
   updateWidgetRequest,
 };
 
