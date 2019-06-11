@@ -50,10 +50,6 @@ Launches the test runner in interactive watch mode.
 
 ### TODO
 
-- Set Typography, the title should be an h1 to be ADA compliant
-- Use memoization to sort the list
+- Make UI more responsive/prettier
 - There is no error handling for failed requests
-- Format the monetary amounts
-- Balances, Savings and Forecast really should not be calculated in every render
 - Unit Tests
-- There is some gnarly defaulting logic (||[] or ||0) that can be removed, for now it's to avoid a NaN to display while waiting for the values to load
