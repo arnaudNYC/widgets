@@ -14,6 +14,8 @@ const styles = theme => ({
   },
 });
 
+const widgetKey = ({ id, lastUpdatedAt }) => `${id}-${lastUpdatedAt}`;
+
 const Widgets = ({
   classes,
   createWidgetRequest,
@@ -34,7 +36,7 @@ const Widgets = ({
           >
             {widgets.map(widget => (
               <Widget
-                key={`${widget.id}-${widget.lastUpdatedAt}`}
+                key={widgetKey(widget)}
                 actions={{
                   deleteWidgetRequest,
                   updateWidgetRequest,

@@ -22,13 +22,13 @@ export const CREATE_WIDGET_FAILURE = 'CREATE_WIDGET_FAILURE';
 const createWidget = reqParams => ({
   [CALL_API]: {
     endpoint: 'widgets',
-    reqParams,
     types: [
       CREATE_WIDGET_REQUEST,
       CREATE_WIDGET_SUCCESS,
       CREATE_WIDGET_FAILURE,
     ],
   },
+  reqParams,
 });
 export const createWidgetRequest = values => dispatch =>
   dispatch(createWidget(values));

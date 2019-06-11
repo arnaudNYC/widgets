@@ -23,6 +23,13 @@
       "name": "In",
       "type": "METAL",
       "lastUpdatedAt": 1555107959603
+    },
+    {
+      "amount": 100,
+      "date": "2019-06-10",
+      "name": "New Widget",
+      "type": "PLASTIC",
+      "id": 1001
     }
   ]
 }
